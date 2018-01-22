@@ -9,7 +9,6 @@ RUN apk add --update --no-cache nodejs git yarn \
 
 USER embetty
 
-RUN yarn install && \
-    yarn test
+RUN yarn install
 
 CMD yarn start
