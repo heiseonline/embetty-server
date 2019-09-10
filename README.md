@@ -30,6 +30,27 @@ $ docker run \
   heiseonline/embetty-server:latest
 ```
 
+You also may use [docker-compose](https://docs.docker.com/compose/):
+
+```yml
+version: '3'
+
+services:
+  server:
+    container_name: embetty
+    image: heiseonline/embetty-server:latest
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      - VALID_ORIGINS=https://example.com
+      - TWITTER_ACCESS_TOKEN_KEY=...
+      - TWITTER_ACCESS_TOKEN_SECRET=...
+      - TWITTER_CONSUMER_KEY=...
+      - TWITTER_CONSUMER_SECRET=...
+```
+
+
 ## Running Embetty server with a process manager
 
 This requires Node.js version 8 or later.
