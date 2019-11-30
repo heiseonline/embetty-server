@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@heise/request-promise-native-record": "^1.0.1",
-    "eslint": "^6.0.0",
+    "eslint": "^6.7.2",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-node": "^10.0.0",
