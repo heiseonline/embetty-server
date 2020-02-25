@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.3, 2020-02-25 
+
+- Fixed Dockerfile issues.
+
 ## v2.0.2, 2020-02-24
 
 - Fixed CI issues.
