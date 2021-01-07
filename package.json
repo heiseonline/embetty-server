@@ -32,7 +32,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^5.0.0",
     "mocha": "^8.2.1",
-    "nodemon": "^2.0.5",
+    "nodemon": "^2.0.7",
     "supertest": "^4.0.2"
   },
   "dependencies": {
