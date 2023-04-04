@@ -7,4 +7,4 @@ NotFound.statusCode = 404
 const Forbidden = new Error()
 Forbidden.statusCode = 403
 
-module.exports = { BadRequest, Forbidden, NotFound }
+export { BadRequest, Forbidden, NotFound }

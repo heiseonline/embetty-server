@@ -1,5 +1,5 @@
-const { BadRequest } = require('../../lib/exceptions')
-const express = require('express')
+import { BadRequest } from '../../lib/exceptions'
+import express from 'express'
 
 const router = express.Router()
 
@@ -21,4 +21,4 @@ router.get('/:id', (req, res) => {
   res.send(req.video)
 })
 
-module.exports = router
+export default router

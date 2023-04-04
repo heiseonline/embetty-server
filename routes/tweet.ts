@@ -1,9 +1,9 @@
-const { BadRequest, NotFound } = require('../lib/exceptions')
-const express = require('express')
+import { BadRequest, NotFound } from '../lib/exceptions'
+import express from 'express'
 
 const router = express.Router()
 
-router.param('id', async (req, res, next, id) => {
+router.param('id', async (req, _res, next, id) => {
   try {
     if (!/^\d+$/.test(id)) throw BadRequest
     req.tweet = await req.app.get('embetty').loadTweet(id)
@@ -13,7 +13,7 @@ router.param('id', async (req, res, next, id) => {
   }
 })
 
-router.param('number', (req, res, next, number) => {
+router.param('number', (_req, _res, next, number) => {
   if (!/^\d+$/.test(number)) return next(BadRequest)
   next()
 })
@@ -59,4 +59,4 @@ router.get('/:id', (req, res) => {
   res.send(req.tweet)
 })
 
-module.exports = router
+export default router

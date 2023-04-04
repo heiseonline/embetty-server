@@ -1,11 +1,11 @@
-const { NotFound } = require('./lib/exceptions')
-const { URL } = require('url')
-const Embetty = require('@heise/embetty-base')
-const express = require('express')
-const helmet = require('helmet')
-const logger = require('morgan')
-const nunjucks = require('nunjucks')
-const routes = require('./routes')
+import { NotFound } from './lib/exceptions'
+import { URL } from 'url'
+import Embetty from '@heise/embetty-base'
+import express from 'express'
+import helmet from 'helmet'
+import logger from 'morgan'
+import nunjucks from 'nunjucks'
+import routes from './routes'
 
 const app = express()
 
@@ -14,7 +14,7 @@ nunjucks
     autoescape: true,
     express: app
   })
-  .addGlobal('urlFor', path => {
+  .addGlobal('urlFor', (path: string) => {
     const urlBase = process.env.URL_BASE
     if (!urlBase) throw new Error('URL_BASE not set.')
     const url = new URL(path, urlBase)
@@ -24,7 +24,7 @@ nunjucks
 app.set('embetty', new Embetty())
 
 app.use(logger(process.env.NODE_ENV === 'production' ? 'short' : 'dev', {
-  skip: (req, res) => process.env.NODE_ENV === 'test'
+  skip: (_req, _res) => process.env.NODE_ENV === 'test'
 }))
 
 app.use(helmet({
@@ -33,11 +33,11 @@ app.use(helmet({
 }))
 app.use('/', routes)
 
-app.use((req, res, next) => {
+app.use((_req, _res, next) => {
   next(NotFound)
 })
 
-app.use((err, req, res, next) => {
+app.use((err, _req, res, _next) => {
   err.statusCode = err.statusCode || 500
   if (err.statusCode >= 500) console.error(err)
   res.sendStatus(err.statusCode)

@@ -1,9 +1,9 @@
-const { BadRequest } = require('../../lib/exceptions')
-const express = require('express')
+import { BadRequest } from '../../lib/exceptions'
+import express from 'express'
 
 const router = express.Router()
 
-router.param('id', async (req, res, next, id) => {
+router.param('id', async (req, _res, next, id) => {
   try {
     if (!/^\d+$/.test(id)) throw BadRequest
     req.video = await req.app.get('embetty').loadVimeoVideo(id)
@@ -33,4 +33,4 @@ router.get('/:id', (req, res) => {
   res.send(req.video)
 })
 
-module.exports = router
+export default router
