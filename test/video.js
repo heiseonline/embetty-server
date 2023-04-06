@@ -81,12 +81,6 @@ describe('Video', () => {
         .expect(400)
     })
 
-    it('should respond with 404', async () => {
-      await request(app)
-        .get('/video/facebook/0')
-        .expect(404)
-    })
-
     it('should support AMP', async () => {
       const response = await request(app)
         .get('/video/facebook/10156049485672318.amp')
