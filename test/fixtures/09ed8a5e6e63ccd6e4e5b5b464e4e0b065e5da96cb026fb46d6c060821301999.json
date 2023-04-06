@@ -1,0 +1,40 @@
+{
+  "statusCode": 404,
+  "body": "",
+  "headers": {
+    "vary": "Origin",
+    "timing-allow-origin": "*",
+    "cross-origin-resource-policy": "cross-origin",
+    "content-type": "image/jpeg",
+    "date": "Thu, 06 Apr 2023 07:30:21 GMT",
+    "expires": "Thu, 06 Apr 2023 07:30:51 GMT",
+    "cache-control": "public, max-age=30",
+    "x-content-type-options": "nosniff",
+    "server": "sffe",
+    "content-length": "1097",
+    "x-xss-protection": "0",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "connection": "close"
+  },
+  "request": {
+    "uri": {
+      "protocol": "https:",
+      "slashes": true,
+      "auth": null,
+      "host": "img.youtube.com",
+      "port": 443,
+      "hostname": "img.youtube.com",
+      "hash": null,
+      "search": null,
+      "query": null,
+      "pathname": "/vi/m6UOo2YGbIE/maxresdefault.jpg",
+      "path": "/vi/m6UOo2YGbIE/maxresdefault.jpg",
+      "href": "https://img.youtube.com/vi/m6UOo2YGbIE/maxresdefault.jpg"
+    },
+    "method": "HEAD",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36",
+      "content-length": 0
+    }
+  }
+}

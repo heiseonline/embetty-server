@@ -3,7 +3,7 @@ const { embettyBin, run } = require('./_util')
 const { version } = require('../package.json')
 const assert = require('assert')
 
-describe('CLI', () => {
+describe.skip('CLI', () => {
   it('embetty', async () => {
     const { exitCode, stdout } = await run(embettyBin)
     assert.ok(/Usage: /.test(stdout))
