@@ -3,11 +3,11 @@ module.exports = {
   extends: 'standard',
   rules: {
     'comma-dangle': [1, 'only-multiline'],
-    'indent': ['error', 2, {MemberExpression: 1 }],
+    indent: ['error', 2, { MemberExpression: 1 }],
     'space-before-function-paren': 0
   },
   parserOptions: {
-    'ecmaVersion': 2018
+    ecmaVersion: 2018
   },
   env: {
     node: true,
