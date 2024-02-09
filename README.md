@@ -1,5 +1,7 @@
 # embetty-server  · [![Build Status](https://travis-ci.org/heiseonline/embetty-server.svg?branch=master)](https://travis-ci.org/heiseonline/embetty-server)  [![Dependency Status](https://img.shields.io/david/heiseonline/embetty-server.svg?style=flat-square)](https://david-dm.org/heiseonline/embetty-server) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+# This repository is outdated. Embetty-Server and other embetty projects are now part of the Monorepo [Embetty](https://github.com/heiseonline/embetty)
+
 [Embetty](https://github.com/heiseonline/embetty) displays remote content like tweets or YouTube videos without compromising your privacy. `embetty-server` acts as a proxy and provides the necessary data.
 
 <p align="center">
